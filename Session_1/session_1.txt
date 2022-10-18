@@ -1,0 +1,58 @@
+In the First Session we will Learn Git.
+
+Step 1 : Go to www.github.com
+         Do Signup if you are a fresh User or Login if Existing
+         While Signup Check all the Sign and take Free Membership Account
+
+Step 2 : Creating a repo
+         Click on Create Repo
+         Name your Repo 
+         Select its Privacy if you need it.
+         Git ignore (Optional)
+         Licence(Optional)
+         Readme File(For Description)
+
+Step 3 : Clone that Repo by Copying its URL
+        We need the Git Client on our System For Cloning
+        go to google and type git bash
+        and the First site www.git-scm.com
+        and in Download --> download for Window
+        Complete the Setup.
+
+        In the Window type Git bash the Terminal will open
+        Navigate To any Drive/Folder Where you want to clone the Repo
+        cloning is Done by Commang
+        git clone <Paste_URL_here>
+
+Step 4 : After Cloning we need a Editor
+        There are Many Editor in the Market 
+        1. VS code
+        2. Sublime Text
+        3. Notepad ++
+        4. Vim
+
+        In Heuristic Academy we Follow on VS Code.Due to its amazinf Feature and Marketplace
+        Download the VS Code from the google
+        and open the VS Code --> go to File in the Toolbar --> open Folder and navigate to the Clone Folder and open it.
+ 
+Step 5 : Add a new File Hello.c
+        Copy the Code in the File:
+
+        #include <stdio.h> 
+
+        void main()
+        {
+            printf("Hello World");
+        }
+
+Step 6 : Staging the File in Git 
+        git add <File Name>
+
+Step 7 : Commit the File
+        git commit -m "Type the Message your"
+
+Step 8 : Push that file to the Server
+        git push
+
+        Check in your Github.com you will notice those changes you had done in your system.
+

@@ -1,0 +1,80 @@
+In this Session we understand the Step involved in the Compilation Process.
+What is the Compilation Process and How it  woirk in the System.
+
+What is a Compilation?
+Before diving into the traditional definition of compilation, let us consider an example where there is a person 'A' 
+who speaks Hindi language and person 'A' wants to talk to person 'B' who only knows English language, 
+so now either of them requires a translator to translate their words to communicate with each other. 
+This process is known as translation, or in terms of programming, it is known as compilation process.
+
+The compilation process in C is converting an understandable human code into a Machine understandable code and 
+checking the syntax and semantics of the code to determine any syntax errors or warnings present in our C program. 
+Suppose we want to execute our C Program written in an IDE (Integrated Development Environment). 
+In that case, it has to go through several phases of compilation (translation) to become an executable file that a machine can understand.
+
+
+Compilation process in C involves four steps:
+1.Preprocessing
+2.Compiling
+3.Assembling
+4.Linking
+
+
+The Compilation Process in C
+
+a. Pre-Processing
+Pre-processing is the first step in the compilation process in C performed using the pre-processor tool 
+(A pre-written program invoked by the system during the compilation). All the statements starting with the # symbol in a C program
+are processed by the pre-processor, and it converts our program file into an intermediate file with no # statements. 
+Under following pre-processing tasks are performed :
+
+i. Comments Removal
+Comments in a C Program are used to give a general idea about a particular statement or part of code actually, 
+comments are the part of code that is removed during the compilation process by the pre-processor as they are not of particular use
+for the machine. The comments in the below program will be removed from the program when the pre-processing phase completes.
+
+ii. Macros Expansion
+Macros are some constant values or expressions defined using the #define directives in C Language. A macro call leads to the macro 
+expansion. The pre-processor creates an intermediate file where some pre-written assembly level instructions replace the defined 
+expressions or constants (basically matching tokens). To differentiate between the original instructions and the assembly instructions 
+resulting from the macros expansion, a '+' sign is added to every macros expanded statement.
+
+Defining a value
+#define G 9.8
+
+Defining an expression
+#define SUM(a,b) (a + b)
+
+
+iii. File inclusion
+File inclusion in C language is the addition of another file containing some pre-written code into our C Program during the pre-processing. 
+It is done using the #include directive. File inclusion during pre-processing causes the entire content of filename to be added to the source code, 
+replacing the #include<filename> directive, creating a new intermediate file.
+
+Example: If we have to use basic input/output functions like printf() and scanf() in our C program, we have to include a pre-defined standard input
+output header file i.e. stdio.h.
+
+iv. Conditional Compilation
+Conditional compilation is running or avoiding a block of code after checking if a macro is defined or not (a constant value or an expression defined using #define). 
+The preprocessor replaces all the conditional compilation directives with some pre-defined assembly code and passes a newly expanded file to the compiler. 
+Conditional compilation can be performed using commands like #ifdef, #endif, #ifndef, #if, #else and #elif in a C Program. Example :
+
+Printing the AGE macro, if AGE macro is defined, else printing Not Defined and ending the conditional compilation block with an #endif directive.
+
+#include <stdio.h>
+
+// if we uncomment the below line, then the program will print AGE in the output.
+// #define AGE 18
+
+int main()
+{
+	// if `AGE` is defined then print the `AGE` else print "Not Defined"
+	#ifdef AGE
+		printf("Age is %d", AGE);
+	#else
+		printf("Not Defined");
+	#endif
+
+	return 0;
+}
+
